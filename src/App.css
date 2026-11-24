@@ -1,0 +1,524 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+.app {
+  min-height: 100vh;
+  background: #090a0d;
+  color: #f5f5f5;
+  font-family: "Inter", sans-serif;
+}
+
+.navbar {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7%;
+  border-bottom: 1px solid #202126;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.logo-icon {
+  font-size: 25px;
+}
+
+.accent {
+  color: #c5a46d;
+}
+
+.beta {
+  font-size: 10px;
+  color: #c5a46d;
+  border: 1px solid #786442;
+  border-radius: 20px;
+  padding: 6px 12px;
+  letter-spacing: 1px;
+}
+
+.main-content {
+  max-width: 1150px;
+  margin: auto;
+  padding: 45px 25px;
+}
+
+.intro {
+  margin-bottom: 35px;
+}
+
+.eyebrow {
+  color: #c5a46d;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+.intro h1 {
+  font-size: clamp(35px, 5vw, 60px);
+  line-height: 1.12;
+  margin: 15px 0;
+  font-weight: 700;
+}
+
+.intro h1 span {
+  color: #c5a46d;
+}
+
+.intro-text {
+  max-width: 450px;
+  color: #92939a;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.try-on {
+  max-width: 700px;
+  margin: 0 auto 55px;
+}
+
+.camera-area {
+  position: relative;
+  height: 460px;
+  overflow: hidden;
+  border: 1px solid #25262a;
+  border-radius: 20px;
+  background:
+    radial-gradient(ellipse at center, #252a31 0%, #12151a 50%, #090a0d 100%);
+}
+
+.camera-top,
+.camera-bottom {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.camera-top {
+  top: 0;
+}
+
+.camera-bottom {
+  bottom: 0;
+}
+
+.camera-status,
+.ar-label {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #dedee0;
+}
+
+.status-dot {
+  display: inline-block;
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  background: #d3b27b;
+  margin-right: 8px;
+}
+
+.camera-placeholder {
+  position: absolute;
+  inset: 70px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hand-placeholder {
+  font-size: 130px;
+  opacity: 0.12;
+  filter: grayscale(1);
+  transform: rotate(-15deg);
+}
+
+.watch-illustration {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-18deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.watch-strap {
+  width: 46px;
+  height: 100px;
+  background: linear-gradient(90deg, #51412b, #c5a46d, #6c5738);
+  border-radius: 10px;
+}
+
+.watch-face {
+  width: 78px;
+  height: 78px;
+  margin-top: -12px;
+  border: 7px solid #c5a46d;
+  border-radius: 50%;
+  background: radial-gradient(circle, #343434, #111);
+  position: relative;
+  box-shadow: 0 0 30px #c5a46d44;
+}
+
+.watch-center {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #c5a46d;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+}
+
+.watch-hand {
+  position: absolute;
+  width: 2px;
+  background: #f4f4f4;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom;
+}
+
+.hand-one {
+  height: 22px;
+  transform: translate(-50%, -100%) rotate(30deg);
+}
+
+.hand-two {
+  height: 15px;
+  transform: translate(-50%, -100%) rotate(120deg);
+}
+
+.watch-illustration.silver .watch-strap {
+  background: linear-gradient(90deg, #555, #d0d0d0, #666);
+}
+
+.watch-illustration.silver .watch-face {
+  border-color: #c4c4c4;
+}
+
+.watch-illustration.black .watch-strap {
+  background: linear-gradient(90deg, #111, #444, #111);
+}
+
+.watch-illustration.black .watch-face {
+  border-color: #444;
+}
+
+.watch-illustration.blue .watch-strap {
+  background: linear-gradient(90deg, #102441, #5579ad, #102441);
+}
+
+.watch-illustration.blue .watch-face {
+  border-color: #6689bd;
+}
+
+.camera-message {
+  position: absolute;
+  bottom: 15px;
+  color: #888;
+  font-size: 12px;
+}
+
+.camera-option {
+  background: none;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 20px;
+}
+
+.camera-option span {
+  font-size: 10px;
+  color: #999;
+}
+
+.capture-button {
+  width: 62px;
+  height: 62px;
+  border: 3px solid white;
+  border-radius: 50%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.capture-button:hover {
+  transform: scale(1.08);
+}
+
+.capture-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: white;
+}
+
+.watch-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 5px;
+  border-bottom: 1px solid #24252a;
+}
+
+.watch-brand {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #c5a46d;
+}
+
+.watch-details h2 {
+  margin: 8px 0;
+  font-size: 25px;
+}
+
+.watch-type {
+  font-size: 12px;
+  color: #999;
+}
+
+.watch-price {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.catalogue {
+  margin-top: 50px;
+}
+
+.catalogue-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.catalogue-heading h2 {
+  font-size: 23px;
+  margin: 10px 0;
+}
+
+.catalogue-count {
+  color: #888;
+  font-size: 12px;
+}
+
+.watch-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.watch-card {
+  position: relative;
+  padding: 15px;
+  text-align: left;
+  border: 1px solid #292a2f;
+  border-radius: 14px;
+  background: #111216;
+  color: white;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.watch-card:hover {
+  border-color: #8c744e;
+  transform: translateY(-3px);
+}
+
+.watch-card.selected {
+  border-color: #c5a46d;
+  background: #191714;
+}
+
+.watch-card-image {
+  height: 130px;
+  border-radius: 10px;
+  background: #1a1b1f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.mini-strap {
+  height: 55px;
+  width: 25px;
+  background: linear-gradient(90deg, #51412b, #c5a46d, #6c5738);
+  border-radius: 5px;
+}
+
+.mini-watch-face {
+  width: 50px;
+  height: 50px;
+  margin-top: -5px;
+  border: 5px solid #c5a46d;
+  border-radius: 50%;
+  background: #111;
+  position: relative;
+}
+
+.mini-center {
+  width: 4px;
+  height: 4px;
+  background: #c5a46d;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+}
+
+.watch-card-image.silver .mini-strap {
+  background: linear-gradient(90deg, #777, #ddd, #777);
+}
+
+.watch-card-image.silver .mini-watch-face {
+  border-color: #c4c4c4;
+}
+
+.watch-card-image.black .mini-strap {
+  background: linear-gradient(90deg, #111, #444, #111);
+}
+
+.watch-card-image.black .mini-watch-face {
+  border-color: #444;
+}
+
+.watch-card-image.blue .mini-strap {
+  background: linear-gradient(90deg, #102441, #5579ad, #102441);
+}
+
+.watch-card-image.blue .mini-watch-face {
+  border-color: #6689bd;
+}
+
+.card-brand,
+.card-name,
+.card-price {
+  display: block;
+}
+
+.card-brand {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #c5a46d;
+  margin-bottom: 6px;
+}
+
+.card-name {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.card-price {
+  font-size: 11px;
+  color: #aaa;
+}
+
+.selected-check {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #c5a46d;
+  color: #090a0d;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 12px;
+}
+
+.notification {
+  background: #1c1c1c;
+  border: 1px solid #c5a46d;
+  color: #c5a46d;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 25px 0;
+  font-size: 13px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 35px 0 10px;
+  color: #555;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .main-content {
+    padding: 30px 18px;
+  }
+
+  .camera-area {
+    height: 400px;
+  }
+
+  .watch-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .watch-details {
+    gap: 15px;
+  }
+
+  .watch-details h2 {
+    font-size: 20px;
+  }
+
+  .watch-price {
+    font-size: 12px;
+  }
+
+  .catalogue-heading h2 {
+    font-size: 20px;
+  }
+
+  .footer {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .camera-area {
+    height: 350px;
+  }
+
+  .watch-card {
+    padding: 10px;
+  }
+
+  .watch-card-image {
+    height: 110px;
+  }
+}
