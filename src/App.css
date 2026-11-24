@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
 .app {
@@ -522,3 +523,85 @@
     height: 110px;
   }
 }
+=======
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #14171f;
+  color: #f2f2f2;
+  font-family: Arial, sans-serif;
+}
+
+.page {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 16px;
+  text-align: center;
+}
+
+h1 { font-size: 26px; margin: 10px 0 16px; }
+
+.camera {
+  border: 3px solid #d4a437;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.choix {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 14px 0;
+}
+
+.choix button {
+  background: #232836;
+  color: #fff;
+  border: 1px solid #555;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.choix button.actif {
+  background: #d4a437;
+  color: #111;
+  border-color: #d4a437;
+  font-weight: bold;
+}
+
+.infos {
+  background: #1e2230;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 0 auto 14px;
+  max-width: 420px;
+}
+
+.infos p { margin: 4px 0; }
+.prix { color: #d4a437; font-size: 20px; font-weight: bold; }
+
+.btn-photo {
+  background: #d4a437;
+  color: #111;
+  border: none;
+  padding: 12px 22px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-photo:hover { background: #e6b94a; }
+
+.resultat { margin-top: 18px; }
+.resultat img {
+  width: 320px;
+  max-width: 100%;
+  border-radius: 8px;
+  border: 2px solid #444;
+}
+.resultat a { color: #d4a437; }
+>>>>>>> paul-techart/main
